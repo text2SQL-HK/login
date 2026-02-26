@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>채팅</title>
+  <base href="/login/" />
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <!-- 네비게이션 바 -->
+  <nav class="navbar">
+    <span class="navbar-brand">Chat</span>
+    <div class="navbar-links">
+      <span class="navbar-user" id="navUser">로딩 중...</span>
+      <a href="mypage">마이페이지</a>
+      <button id="logoutBtn">로그아웃</button>
+    </div>
+  </nav>
+
+  <!-- 채팅 영역 -->
+  <div class="chat-container">
+    <div class="chat-messages" id="chatMessages">
+      <!-- 채팅 메시지가 여기에 렌더링됩니다 -->
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="메시지를 입력하세요..." maxlength="2000" />
+      <button class="btn btn-primary" id="sendBtn">전송</button>
+    </div>
+  </div>
+
+  <script src="static/js/api.js"></script>
+  <script src="static/js/index.js"></script>
+</body>
+</html>

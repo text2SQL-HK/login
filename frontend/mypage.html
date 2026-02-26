@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지</title>
+  <base href="/login/" />
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <!-- 네비게이션 바 -->
+  <nav class="navbar">
+    <span class="navbar-brand">마이페이지</span>
+    <div class="navbar-links">
+      <a href="chat">채팅으로 돌아가기</a>
+      <button id="logoutBtn">로그아웃</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>내 정보 수정</h1>
+        <p>아래에서 프로필 정보를 변경할 수 있습니다</p>
+      </div>
+
+      <!-- 알림 메시지 -->
+      <div id="msg" class="message"></div>
+
+      <!-- 읽기 전용 정보 -->
+      <div class="form-group">
+        <label>이메일</label>
+        <input type="email" id="myEmail" disabled />
+      </div>
+      <div class="form-group">
+        <label>권한</label>
+        <input type="text" id="myLevel" disabled />
+      </div>
+      <div class="form-group">
+        <label>가입일</label>
+        <input type="text" id="myCreated" disabled />
+      </div>
+
+      <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--color-border);" />
+
+      <!-- 수정 가능 필드 -->
+      <form id="updateForm">
+        <div class="form-group">
+          <label for="myUsername">사용자 이름</label>
+          <input type="text" id="myUsername" placeholder="변경할 이름" required />
+        </div>
+        <div class="form-group">
+          <label for="myPhone">전화번호</label>
+          <input type="tel" id="myPhone" placeholder="010-1234-5678" />
+        </div>
+        <button type="submit" class="btn btn-primary">저장</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="static/js/api.js"></script>
+  <script src="static/js/mypage.js"></script>
+</body>
+</html>

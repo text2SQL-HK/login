@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>로그인</title>
+  <base href="/login/" />
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1>Welcome</h1>
+        <p>계정에 로그인하거나 새로 가입하세요</p>
+      </div>
+
+      <!-- 탭 전환 -->
+      <div class="tabs">
+        <button class="tab active" data-tab="login">로그인</button>
+        <button class="tab" data-tab="register">회원가입</button>
+      </div>
+
+      <!-- 알림 메시지 -->
+      <div id="msg" class="message"></div>
+
+      <!-- 로그인 폼 -->
+      <div id="tab-login" class="tab-content active">
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">이메일</label>
+            <input type="email" id="loginEmail" placeholder="example@mail.com" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">비밀번호</label>
+            <input type="password" id="loginPassword" placeholder="비밀번호 입력" required />
+          </div>
+          <button type="submit" class="btn btn-primary">로그인</button>
+        </form>
+      </div>
+
+      <!-- 회원가입 폼 -->
+      <div id="tab-register" class="tab-content">
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="regEmail">이메일</label>
+            <input type="email" id="regEmail" placeholder="example@mail.com" required />
+          </div>
+          <div class="form-group">
+            <label for="regPassword">비밀번호</label>
+            <input type="password" id="regPassword" placeholder="6자 이상" minlength="6" required />
+          </div>
+          <div class="form-group">
+            <label for="regUsername">사용자 이름</label>
+            <input type="text" id="regUsername" placeholder="닉네임 또는 실명" required />
+          </div>
+          <div class="form-group">
+            <label for="regPhone">전화번호 (선택)</label>
+            <input type="tel" id="regPhone" placeholder="010-1234-5678" />
+          </div>
+          <button type="submit" class="btn btn-primary">회원가입</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/api.js"></script>
+  <script src="static/js/login.js"></script>
+</body>
+</html>
