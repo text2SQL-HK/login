@@ -340,3 +340,7 @@ curl -i http://localhost/api/tts/info
 4. 로그인 후 `/tts`, `/api/tts/info` 확인
 5. Nginx 게이트웨이로 `/login`, `/tts`, `/healthz` 확인
 6. README 내 민감정보 미포함 확인
+
+## Private configuration
+
+See [SECURITY_SETUP.md](SECURITY_SETUP.md) before running. Private data and credentials must be supplied separately.
